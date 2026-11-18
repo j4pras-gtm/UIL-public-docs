@@ -2,7 +2,7 @@
 
 This repository contains the sanitized public product overview for UIL. It is intentionally separate from the private implementation repository and contains no source code, build specifications, internal API contracts, deployment details, browser artifacts, diagnostics, credentials, or private links.
 
-The site explains what the product is intended to do, how it works at a high level, its operating modes, safety boundaries, and public capability status.
+The site explains what the product is intended to do, how it works at a high level, its operating modes, safety boundaries, and public capability status. The workspace user is the Admin: the Admin page is a self-service place to connect AI/API providers and review UILinkedin readiness; a broader usage dashboard is on the roadmap.
 
 ## Public site
 

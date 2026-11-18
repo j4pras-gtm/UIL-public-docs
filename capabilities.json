@@ -14,8 +14,8 @@
     {
       "id": "full-api",
       "label": "Full API mode",
-      "status": "administrator-configured",
-      "summary": "Uses an approved project API when an administrator has configured and authorized one."
+      "status": "user-configured",
+      "summary": "Uses an approved project API when the workspace user has configured and authorized one."
     },
     {
       "id": "sample",
@@ -30,11 +30,16 @@
     "writeActions": "disabled",
     "backgroundCrawling": "disabled"
   },
+  "adminModel": {
+    "role": "workspace-user",
+    "dashboardPurpose": ["connect AI providers", "connect API providers", "test connections", "review workspace readiness"],
+    "usageDashboard": "roadmap"
+  },
   "publicCapabilities": [
     { "id": "bounded-research", "status": "available-with-user-session" },
     { "id": "visible-result-review", "status": "available-with-user-session" },
     { "id": "structured-review-surface", "status": "available" },
-    { "id": "administrator-provider-configuration", "status": "administrator-configured" },
+    { "id": "user-provider-configuration", "status": "user-configured" },
     { "id": "ai-assistance", "status": "off-by-default" },
     { "id": "authenticated-application-access", "status": "off-by-default" }
   ],
@@ -48,6 +53,6 @@
   "runtimeInputs": [
     "a supported browser",
     "the user's own authorized browser session when browser-assisted mode is selected",
-    "administrator-approved providers when Full API mode is selected"
+    "user-approved providers when Full API mode is selected"
   ]
 }
