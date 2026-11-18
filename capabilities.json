@@ -1,0 +1,53 @@
+{
+  "documentType": "public-product-overview",
+  "schemaVersion": "1.0",
+  "productName": "UIL",
+  "summary": "A browser-assisted research workspace for bounded, user-authorized information workflows.",
+  "audience": ["human users", "AI assistants", "product reviewers"],
+  "operatingModes": [
+    {
+      "id": "browser-assisted",
+      "label": "Browser-assisted mode",
+      "status": "available",
+      "summary": "Uses the user's own browser session for visible, user-authorized research operations."
+    },
+    {
+      "id": "full-api",
+      "label": "Full API mode",
+      "status": "administrator-configured",
+      "summary": "Uses an approved project API when an administrator has configured and authorized one."
+    },
+    {
+      "id": "sample",
+      "label": "Sample mode",
+      "status": "available",
+      "summary": "Demonstrates the interface with clearly labeled non-live data."
+    }
+  ],
+  "defaults": {
+    "authentication": "off",
+    "ai": "off",
+    "writeActions": "disabled",
+    "backgroundCrawling": "disabled"
+  },
+  "publicCapabilities": [
+    { "id": "bounded-research", "status": "available-with-user-session" },
+    { "id": "visible-result-review", "status": "available-with-user-session" },
+    { "id": "structured-review-surface", "status": "available" },
+    { "id": "administrator-provider-configuration", "status": "administrator-configured" },
+    { "id": "ai-assistance", "status": "off-by-default" },
+    { "id": "authenticated-application-access", "status": "off-by-default" }
+  ],
+  "notSupported": [
+    "credential collection",
+    "background crawling",
+    "unapproved write actions",
+    "automatic security-challenge bypass",
+    "unbounded extraction"
+  ],
+  "runtimeInputs": [
+    "a supported browser",
+    "the user's own authorized browser session when browser-assisted mode is selected",
+    "administrator-approved providers when Full API mode is selected"
+  ]
+}
